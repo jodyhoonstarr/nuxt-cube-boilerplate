@@ -1,6 +1,8 @@
 {
-	"name": "@nuxt-cube-boilerplate-monorepo/cube",
+	"name": "@test-monorepo/cube",
+  "type": "module",
   "scripts": {
+		"dev": "nuxt dev",
     "css": "npx postcss src/css/*.css --dir dist/css",
     "clean": "rm -r -f dist && mkdir dist",
     "start": "npm run clean && cp src/index.html dist/index.html && concurrently 'npx serve dist' 'npm run css -- --watch'"
