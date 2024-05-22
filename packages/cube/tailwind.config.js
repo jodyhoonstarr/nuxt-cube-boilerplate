@@ -2,17 +2,17 @@ const plugin = require('tailwindcss/plugin');
 const postcss = require('postcss');
 const postcssJs = require('postcss-js');
 
-const clampGenerator = require('./src/css-utils/clamp-generator.js');
-const tokensToTailwind = require('./src/css-utils/tokens-to-tailwind.js');
+const clampGenerator = require('./assets/css-utils/clamp-generator.js');
+const tokensToTailwind = require('./assets/css-utils/tokens-to-tailwind.js');
 
 // Raw design tokens
-const colorTokens = require('./src/design-tokens/colors.json');
-const fontTokens = require('./src/design-tokens/fonts.json');
-const spacingTokens = require('./src/design-tokens/spacing.json');
-const textSizeTokens = require('./src/design-tokens/text-sizes.json');
-const textLeadingTokens = require('./src/design-tokens/text-leading.json');
-const textWeightTokens = require('./src/design-tokens/text-weights.json');
-const viewportTokens = require('./src/design-tokens/viewports.json');
+const colorTokens = require('./assets/design-tokens/colors.json');
+const fontTokens = require('./assets/design-tokens/fonts.json');
+const spacingTokens = require('./assets/design-tokens/spacing.json');
+const textSizeTokens = require('./assets/design-tokens/text-sizes.json');
+const textLeadingTokens = require('./assets/design-tokens/text-leading.json');
+const textWeightTokens = require('./assets/design-tokens/text-weights.json');
+const viewportTokens = require('./assets/design-tokens/viewports.json');
 
 // Process design tokens
 const colors = tokensToTailwind(colorTokens.items);
@@ -23,7 +23,7 @@ const lineHeight = tokensToTailwind(textLeadingTokens.items);
 const spacing = tokensToTailwind(clampGenerator(spacingTokens.items));
 
 module.exports = {
-  content: ['./src/**/*.{html,js,jsx,mdx,njk,twig,vue}'],
+  content: ['./**/*.{html,js,jsx,mdx,njk,twig,vue}'],
   // Add color classes to safe list so they are always generated
   safelist: [],
   presets: [],

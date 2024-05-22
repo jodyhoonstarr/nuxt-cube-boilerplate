@@ -12,7 +12,7 @@ const absoluteCss = (absolutePath) => {
   return glob.sync(path.join(absolutePath, '**/*.css'));
 }
 
-const findCss = (path) => {
+const findCssInPath = (path) => {
   if (path.startsWith('/')) {
     return absoluteCss(path);
   } else {
@@ -20,6 +20,11 @@ const findCss = (path) => {
   }
 }
 
+const relativeCssFile = (relativePath) => {
+  return path.resolve(__dirname, relativePath);
+}
+
+const globalCssFile = relativeCssFile('./src/css/global.css');
 
 
 export default defineNuxtConfig({
@@ -32,6 +37,15 @@ export default defineNuxtConfig({
       "tailwindcss": {},
     },
   },
-  css: findCss('src/css/'),
   modules: ['@nuxtjs/tailwindcss'],
+  // vite: {
+  //   css: {
+  //     preprocessorOptions: {
+  //       postcss: {
+  //         additionalData: `@use "${globalCssFile}" as *\n`
+  //       }
+  //     }
+  //   }
+  // }
+  
 })

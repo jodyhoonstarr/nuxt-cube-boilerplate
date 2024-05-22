@@ -10,7 +10,6 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.12.1",
-    "@fontsource/inter": "^5.0.18",
     "@nuxt/eslint-config": "^0.3.12",
     "@nuxtjs/tailwindcss": "^6.12.0",
     "@tailwindcss/forms": "^0.5.7",
@@ -28,6 +27,7 @@
     "zx": "^8.0.2"
   },
   "dependencies": {
+    "@fontsource-variable/inter": "^5.0.18",
     "@types/node": "^20.12.12"
   }
 }

@@ -1,0 +1,33 @@
+@import 'tailwindcss/base';
+
+@import 'global/reset.css';
+@import 'global/fonts.css';
+
+@import 'tailwindcss/components';
+
+@import 'global/variables.css';
+@import 'global/global-styles.css';
+
+/* 
+See issue: https://github.com/frankstallone/astro-cube-boilerplate/issues/1
+Reference source: https://github.com/Set-Creative-Studio/cube-boilerplate/blob/main/src/css/global.css#L11
+
+@import-glob 'blocks/*.css' layer(components);
+@import-glob 'components/*.css' layer(components);
+@import-glob 'utilities/*.css' layer(components); 
+*/
+
+@import 'blocks/prose.css' layer(components);
+
+@import 'compositions/cluster.css' layer(components);
+@import 'compositions/flow.css' layer(components);
+@import 'compositions/grid.css' layer(components);
+@import 'compositions/repel.css' layer(components);
+@import 'compositions/sidebar.css' layer(components);
+@import 'compositions/switcher.css' layer(components);
+@import 'compositions/wrapper.css' layer(components);
+
+@import 'utilities/region.css' layer(components);
+@import 'utilities/visually-hidden.css' layer(components);
+
+@import 'tailwindcss/utilities';
