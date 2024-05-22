@@ -1,0 +1,11 @@
+{
+  "name": "@test-monorepo/kitchen-sink",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt dev"
+  },
+  "devDependencies": {
+    "@test-monorepo/cube": "workspace:^"
+  }
+}
