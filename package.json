@@ -1,6 +1,6 @@
 {
   "name": "test-monorepo",
-	"type": "module",
+  "type": "module",
   "version": "0.0.1",
   "private": true,
   "description": "testing cube in a nuxt pnpm monorepo",
@@ -26,5 +26,8 @@
     "vue-router": "^4.3.2",
     "vue-tsc": "^2.0.17",
     "zx": "^8.0.2"
+  },
+  "dependencies": {
+    "@types/node": "^20.12.12"
   }
 }

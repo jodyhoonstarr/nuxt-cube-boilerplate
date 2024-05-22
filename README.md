@@ -8,3 +8,11 @@ Links:
 - [cube boilerplate](https://github.com/Set-Creative-Studio/cube-boilerplate)
 - [example pattern library](https://smashing-scaling-css-workshop.netlify.app/pattern-library/) - copy saved in `reference/pattern-library`
 - [html kitchen sink](https://codepen.io/chriscoyier/pen/JpLzjd)
+
+## Test the cube setup
+
+```shell
+pnpm --filter @test-monorepo/cube dev
+```
+
+Note: the tailwind utils work, missing *.css passed through postcss
