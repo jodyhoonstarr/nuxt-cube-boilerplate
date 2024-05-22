@@ -1,6 +1,10 @@
+<script setup lang="ts">
+import "@fontsource-variable/inter";
+</script>
+
 <template>
   <article class="wrapper flow">
-    <h1>An App Extending from the CUBE Base</h1>
+    <h1>Extending from the CUBE Base</h1>
     <div class="switcher">
       <h2 class="text-primary">A heading and paragraph in two columns</h2>
       <p>
@@ -10,5 +14,11 @@
         consectetur et.
       </p>
     </div>
+
+    <CubeShareableComponent />
   </article>
 </template>
+
+<style lang="postcss">
+@import "~/assets/css/global.css";
+</style>
