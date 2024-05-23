@@ -13,6 +13,6 @@ Links:
 
 ```shell
 pnpm --filter @test-monorepo/cube dev
-```
 
-Note: the tailwind utils work, missing *.css passed through postcss
+pnpm --filter @test-monorepo/kitchen-sink dev
+```
