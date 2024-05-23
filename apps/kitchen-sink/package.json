@@ -3,7 +3,10 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "dev": "nuxt dev"
+		"build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview"
   },
   "devDependencies": {
     "@test-monorepo/cube": "workspace:^"
