@@ -4,8 +4,13 @@
   "items": [
     {
       "name": "Base",
-      "description": "System fonts for body copy and globally set text.",
-      "value": ["Inter Variable", "Inter", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "sans-serif"]
-    }
+      "description": "System fonts for body copy and globally set text. Sourced from https://modernfontstacks.com",
+			"value": ["Inter", "Roboto", "Helvetica Neue", "Arial Nova", "Nimbus Sans", "Arial", "sans-serif"]
+    },
+		{
+			"name": "Code",
+			"description": "System fonts for code. Sourced from https://modernfontstacks.com",
+			"value": ["ui-monospace", "Cascadia Code", "Source Code Pro", "Menlo", "Consolas", "DejaVu Sans Mono", "monospace"]
+		}
   ]
 }

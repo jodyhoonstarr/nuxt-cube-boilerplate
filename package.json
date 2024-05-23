@@ -27,8 +27,6 @@
     "zx": "^8.0.2"
   },
   "dependencies": {
-    "@fontsource-variable/inter": "^5.0.18",
-    "@nuxt/fonts": "^0.7.0",
     "@types/node": "^20.12.12"
   }
 }

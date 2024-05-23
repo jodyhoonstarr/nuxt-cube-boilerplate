@@ -9,6 +9,5 @@ export default defineNuxtConfig({
   extends: ['@test-monorepo/cube'],
   modules: [
     '@nuxtjs/tailwindcss',
-    '@nuxt/fonts',
   ],
 })

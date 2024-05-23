@@ -1,7 +1,3 @@
-<script setup lang="ts">
-import "@fontsource-variable/inter";
-</script>
-
 <template>
   <article class="wrapper flow">
     <h1>Extending from the CUBE Base</h1>
@@ -215,7 +211,7 @@ import "@fontsource-variable/inter";
 
       <pre>
         <code>
-          #header h1 a {
+        #header h1 a {
           display: block;
           width: 300px;
           height: 80px;
