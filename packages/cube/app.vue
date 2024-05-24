@@ -1,7 +1,3 @@
-<script setup lang="ts">
-import "@fontsource-variable/inter";
-</script>
-
 <template>
   <article class="wrapper flow">
     <h1>CUBE CSS core setup</h1>
