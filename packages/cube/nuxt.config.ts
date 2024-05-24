@@ -8,7 +8,6 @@ export default defineNuxtConfig({
   devtools: { enabled: false },
   postcss: {
     plugins: {
-      "postcss-import-ext-glob": {},
       "postcss-import": {},
       "tailwindcss": {},
     },
