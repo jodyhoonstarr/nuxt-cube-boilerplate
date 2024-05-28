@@ -1,6 +1,8 @@
 const plugin = require('tailwindcss/plugin');
 const postcss = require('postcss');
 const postcssJs = require('postcss-js');
+const fs = require('fs');
+const path = require('path');
 
 const clampGenerator = require('./assets/css-utils/clamp-generator.js');
 const tokensToTailwind = require('./assets/css-utils/tokens-to-tailwind.js');
@@ -21,6 +23,24 @@ const fontWeight = tokensToTailwind(textWeightTokens.items);
 const fontSize = tokensToTailwind(clampGenerator(textSizeTokens.items));
 const lineHeight = tokensToTailwind(textLeadingTokens.items);
 const spacing = tokensToTailwind(clampGenerator(spacingTokens.items));
+
+const tokensFile = './generated/tokens.css';
+function saveTokensToFile(tokens, filePath) {
+  const p = path.resolve(__dirname, filePath);
+
+  // ensure the directory exists
+  const dir = path.dirname(p);
+  if (!fs.existsSync(dir)) {
+    fs.mkdirSync(dir, {recursive: true});
+  }
+
+  // remove the file if it exists
+  if (fs.existsSync(p)) {
+    fs.unlinkSync(p);
+  }
+
+  fs.writeFileSync(p, tokens);
+}
 
 module.exports = {
   content: ['./**/*.{html,js,jsx,mdx,njk,twig,vue}'],
@@ -113,6 +133,18 @@ module.exports = {
       addComponents({
         ':root': postcssJs.objectify(postcss.parse(result))
       });
+
+      // if running under nuxt/vite, output the css variables to a file
+      // the tailwind vscode extension will crash if it runs this block
+      // so we make sure it only runs in the nuxt/vite environment
+      if (process.env.NUXT_VITE_NODE_OPTIONS){
+        try{
+          saveTokensToFile(`:root{${result}}`, tokensFile);
+        } catch (e) {
+          console.error(e);
+        }
+      }
+
     }),
 
     // Generates custom utility classes
