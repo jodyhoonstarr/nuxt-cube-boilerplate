@@ -7,7 +7,4 @@ export default defineNuxtConfig({
     enabled: true,
   },
   extends: ['@test-monorepo/cube'],
-  modules: [
-    '@nuxtjs/tailwindcss',
-  ],
 })

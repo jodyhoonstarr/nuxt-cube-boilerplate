@@ -43,7 +43,14 @@ function saveTokensToFile(tokens, filePath) {
 }
 
 module.exports = {
-  content: ['./**/*.{html,js,jsx,mdx,njk,twig,vue}'],
+  content: [
+    "./components/**/*.{js,vue,ts}",
+    "./layouts/**/*.vue",
+    "./pages/**/*.vue",
+    "./plugins/**/*.{js,ts}",
+    "./app.vue",
+    "./error.vue",
+  ],
   // Add color classes to safe list so they are always generated
   safelist: [],
   presets: [],

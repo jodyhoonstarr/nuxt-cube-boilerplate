@@ -10,9 +10,9 @@ export default defineNuxtConfig({
     plugins: {
       "postcss-import": {},
       "tailwindcss": {},
+      "autoprefixer": {},
     },
   },
-  modules: ['@nuxtjs/tailwindcss'],
   alias: { '~cube': resolve('./') },
   components: [
     { path: '~cube/components', prefix: 'Cube' }

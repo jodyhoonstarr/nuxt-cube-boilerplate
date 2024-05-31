@@ -22,3 +22,9 @@ pnpm --filter @test-monorepo/cube dev
 # kitchen sink importing cube
 pnpm --filter @test-monorepo/kitchen-sink dev
 ```
+
+## FAQ
+
+Why not use the @nuxtjs/tailwind module?
+
+> The packages/cube module, following the CUBE boilerplate, uses some of the tailwind build chain under the hood. It was not clear how to use these from within the @nuxtjs/tailwindcss package. The vanilla versions are preferred so not to introduce version compatibility issues between the tailwindcss package and the nuxt module.
